@@ -661,6 +661,10 @@
 			<Add directory="$(#WXWIDGETS.lib)/gcc_dll$(#WXWIDGETS.WX_CFG)" />
 			<Add directory="devel$(WX_VER)" />
 		</Linker>
+		<ExtraCommands>
+			<Add before="cmd /C echo @call update.bat $(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS) &gt;  updateWindows.bat" />
+			<Mode after="always" />
+		</ExtraCommands>
 		<Unit filename="base/tinyxml/tinystr.cpp">
 			<Option target="tinyXML" />
 		</Unit>
