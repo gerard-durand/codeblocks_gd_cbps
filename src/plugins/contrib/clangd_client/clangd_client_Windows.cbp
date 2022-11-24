@@ -48,7 +48,7 @@
 			<Add directory="../../../include" />
 			<Add directory="../../../sdk/wxscintilla/include" />
 			<Add directory="../../../include/tinyxml" />
-			<Add directory="$(PROJECT_DIR)/src" />
+			<Add directory="src" />
 			<Add directory="src/LSPclient" />
 			<Add directory="src/winprocess" />
 			<Add directory="src/winprocess/asyncprocess" />
