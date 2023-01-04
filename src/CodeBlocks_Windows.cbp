@@ -147,7 +147,7 @@
 					<Add option="-Wl,--enable-auto-import" />
 					<Add option="-Wl,--no-undefined" />
 					<Add library="codeblocks" />
-					<Add library="exchndl" />
+					<Add library="exchndl.dll" />
 					<Add library="shfolder" />
 					<Add library="kernel32" />
 					<Add library="user32" />
@@ -662,7 +662,7 @@
 			<Add directory="devel$(WX_VER)" />
 		</Linker>
 		<ExtraCommands>
-			<Add before="cmd /C echo @call update.bat $(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS) &gt;  updateWindows.bat" />
+			<Add before="cmd /C echo @call update.bat $(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS) &gt; updateWindows.bat" />
 			<Mode after="always" />
 		</ExtraCommands>
 		<Unit filename="base/tinyxml/tinystr.cpp">
