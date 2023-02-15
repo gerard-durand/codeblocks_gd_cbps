@@ -48,7 +48,7 @@
 				<ExtraCommands>
 					<Add after="zip -j9 ..\..\..\devel$(WX_VER)\share\codeblocks\BrowseTracker.zip manifest.xml" />
 					<Add after="zip -j9 ..\..\..\devel$(WX_VER)\share\codeblocks\BrowseTracker.zip BrowseTrackerToolbar.xrc" />
-					<Add after="zip -9r  ..\..\..\devel$(WX_VER)\share\codeblocks\BrowseTracker.zip .\images" />
+					<Add after="zip -9r ..\..\..\devel$(WX_VER)\share\codeblocks\BrowseTracker.zip .\images" />
 				</ExtraCommands>
 			</Target>
 			<Environment>
@@ -80,6 +80,8 @@
 		<Unit filename="JumpData.h" />
 		<Unit filename="JumpTracker.cpp" />
 		<Unit filename="JumpTracker.h" />
+		<Unit filename="JumpTrackerView.cpp" />
+		<Unit filename="JumpTrackerView.h" />
 		<Unit filename="Makefile.am" />
 		<Unit filename="ProjectData.cpp" />
 		<Unit filename="ProjectData.h" />
