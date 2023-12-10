@@ -212,10 +212,6 @@
 		<Unit filename="wxthings/wxcustombutton32.xpm" />
 		<Unit filename="wxthings/wxscustombutton.cpp" />
 		<Unit filename="wxthings/wxscustombutton.h" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

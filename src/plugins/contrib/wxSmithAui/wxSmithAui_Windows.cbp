@@ -44,8 +44,6 @@
 			</Target>
 			<Environment>
 				<Variable name="WX_CONFIG" value="wx-config --version=3.1" />
-			</Environment>
-			<Environment>
 				<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
 			</Environment>
 		</Build>

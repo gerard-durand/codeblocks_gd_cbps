@@ -54,10 +54,10 @@
 					<Add after="zip -Rq9 ..\..\..\devel$(WX_VER)\share\codeblocks\NassiShneiderman.zip images\svg\*.svg" />
 					<Mode after="always" />
 				</ExtraCommands>
+			    <Environment>
+				    <Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
+			    </Environment>
 			</Target>
-			<Environment>
-				<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
-			</Environment>
 		</Build>
 		<VirtualTargets>
 			<Add alias="All" targets="default;" />

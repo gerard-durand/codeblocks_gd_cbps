@@ -47,10 +47,10 @@
 					<Add after="zip -jq9 ..\..\..\devel$(WX_VER)\share\codeblocks\ReopenEditor.zip manifest.xml *.xrc" />
 					<Mode after="always" />
 				</ExtraCommands>
+			    <Environment>
+				    <Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
+			    </Environment>
 			</Target>
-			<Environment>
-				<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
-			</Environment>
 		</Build>
 		<VirtualTargets>
 			<Add alias="All" targets="default;" />
