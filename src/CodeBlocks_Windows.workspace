@@ -6,16 +6,22 @@
 		<Project filename="tools/cb_share_config/cb_share_config_Windows.cbp" />
 		<Project filename="tools/CBLauncher/CbLauncher_Windows.cbp" />
 		<Project filename="tools/cbp2make/cbp2make_Windows.cbp" />
-		<Project filename="plugins/codecompletion/cctest_Windows.cbp" />
-		<Project filename="plugins/contrib/wxContribItems/wxContribItems_Windows.cbp" />
+		<Project filename="plugins/codecompletion/cctest_Windows.cbp">
+			<Depends filename="CodeBlocks_Windows.cbp" />
+		</Project>
+		<Project filename="plugins/contrib/wxContribItems/wxContribItems_Windows.cbp">
+			<Depends filename="CodeBlocks_Windows.cbp" />
+		</Project>
 		<Project filename="plugins/contrib/wxSmith/wxSmith_Windows.cbp">
 			<Depends filename="CodeBlocks_Windows.cbp" />
 		</Project>
 		<Project filename="plugins/contrib/wxSmithContribItems/wxSmithContribItems_Windows.cbp">
+			<Depends filename="CodeBlocks_Windows.cbp" />
 			<Depends filename="plugins/contrib/wxContribItems/wxContribItems_Windows.cbp" />
 			<Depends filename="plugins/contrib/wxSmith/wxSmith_Windows.cbp" />
 		</Project>
 		<Project filename="plugins/contrib/wxSmithAui/wxSmithAui_Windows.cbp">
+			<Depends filename="CodeBlocks_Windows.cbp" />
 			<Depends filename="plugins/contrib/wxSmith/wxSmith_Windows.cbp" />
 		</Project>
 		<Project filename="plugins/headerguard/headerguard_Windows.cbp">
