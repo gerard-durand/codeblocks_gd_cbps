@@ -28,12 +28,11 @@ wxwidgets variable contains 3 user-defined fields:
 - wx_suffix normally contains the letter u, for Unicode;
 - wx_version reflect the wxwidgets version, here 33 for all versions 3.3. (3.3.0, 3.3.1, …)
 
-_Note_: They correspond to environment variables in standard cbp files:
-
+_Note_: They correspond to environment variables in standard cbp files:\
 &lt;Environment&gt;\
-&lt;Variable name="WX_CFG" value="" /&gt;\
-&lt;Variable name="WX_SUFFIX" value="u" /&gt;\
-&lt;Variable name="WX_VERSION" value="33" /&gt;\
+	&lt;Variable name="WX_CFG" value="" /&gt;\
+	&lt;Variable name="WX_SUFFIX" value="u" /&gt;\
+	&lt;Variable name="WX_VERSION" value="33" /&gt;\
 &lt;/Environment&gt;
 
 **How to use them**:
