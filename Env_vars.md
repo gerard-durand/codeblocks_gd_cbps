@@ -30,14 +30,10 @@ wxwidgets variable contains 3 user-defined fields:
 
 _Note_: They correspond to environment variables in standard cbp files:
 
-&lt;Environment&gt;
-
-    &lt;Variable name="WX_CFG" value="" /&gt;
-
-    &lt;Variable name="WX_SUFFIX" value="u" /&gt;
-
-    &lt;Variable name="WX_VERSION" value="33" /&gt;
-
+&lt;Environment&gt;\
+&lt;Variable name="WX_CFG" value="" /&gt;\
+&lt;Variable name="WX_SUFFIX" value="u" /&gt;\
+&lt;Variable name="WX_VERSION" value="33" /&gt;\
 &lt;/Environment&gt;
 
 **How to use them**:
