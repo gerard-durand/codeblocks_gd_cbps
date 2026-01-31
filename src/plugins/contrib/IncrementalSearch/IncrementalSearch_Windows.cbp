@@ -27,9 +27,9 @@
 					<Add option="-DWXUSINGDLL" />
 					<Add option="-DBUILDING_PLUGIN" />
 					<Add option="-DcbDEBUG" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-DCB_PRECOMP" />
+					<Add option="-DNOPCH" />
 					<Add option="-DwxUSE_UNICODE" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="../../../include" />
 					<Add directory="../../../include/tinyxml" />
 					<Add directory="../../../sdk/wxscintilla/include" />
@@ -61,6 +61,7 @@
 			<Add alias="All" targets="default;" />
 		</VirtualTargets>
 		<Compiler>
+			<Add option="$(#CB_BUILD.CFLAGS)" />
 			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 		</Compiler>
 		<Unit filename="IncrementalSearch.cpp" />
@@ -71,9 +72,6 @@
 		<Unit filename="IncrementalSearchToolbar.xrc" />
 		<Unit filename="manifest.xml" />
 		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
 			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>

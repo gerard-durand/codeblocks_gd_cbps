@@ -15,6 +15,10 @@
 				<Option host_application="../../../devel$(WX_VER)/codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
 				<Option projectCompilerOptionsRelation="0" />
+				<Compiler>
+					<Add option="-std=$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
 			</Target>
 			<Environment>
 				<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
@@ -29,8 +33,7 @@
 			<Add option="-mthreads" />
 			<Add option="-fexceptions" />
 			<Add option="-DBUILDING_PLUGIN" />
-			<Add option="-Winvalid-pch" />
-			<Add option="-DCB_PRECOMP" />
+			<Add option="-DNOPCH" />
 			<Add option="-DHAVE_W32API_H" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
@@ -60,10 +63,6 @@
 		</ExtraCommands>
 		<Unit filename="Cccc.cpp" />
 		<Unit filename="Cccc.h" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

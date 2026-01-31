@@ -26,9 +26,9 @@
 					<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
 					<Add option="-DWXUSINGDLL" />
 					<Add option="-DcbDEBUG" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-DCB_PRECOMP" />
+					<Add option="-DNOPCH" />
 					<Add option="-DwxUSE_UNICODE" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="../../../include" />
 					<Add directory="../../../include/tinyxml" />
 					<Add directory="../../../sdk/wxscintilla/include" />
@@ -73,8 +73,6 @@
 		<Unit filename="avVersionEditorDlg.h" />
 		<Unit filename="manifest.xml" />
 		<Extensions>
-			<code_completion />
-			<envvars />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="avVersionEditorDlg.cpp" main="avVersionEditorDlg" init_handlers="necessary" language="CPP" />
 				<resources>
@@ -82,7 +80,6 @@
 					<wxScrollingDialog wxs="wxsmith/avChangesDlg.wxs" src="avChangesDlg.cpp" hdr="avChangesDlg.h" fwddecl="0" i18n="1" name="avChangesDlg" language="CPP" />
 				</resources>
 			</wxsmith>
-			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

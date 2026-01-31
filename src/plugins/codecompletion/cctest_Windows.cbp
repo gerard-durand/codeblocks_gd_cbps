@@ -12,6 +12,8 @@
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="cctest" />
 					<Add directory="parser" />
 					<Add directory="." />
@@ -31,7 +33,6 @@
 			<Add option="-fmessage-length=0" />
 			<Add option="-fexceptions" />
 			<Add option="-mthreads" />
-			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add option="-m$(#CB_BUILD.OSBITS)" />
 			<Add option="-fno-keep-inline-dllexport" />
 			<Add option="-DHAVE_W32API_H" />
@@ -40,6 +41,7 @@
 			<Add option="-DcbDEBUG" />
 			<Add option="-DwxUSE_UNICODE" />
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
+			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add directory="$(#WXWIDGETS.include)" />
 			<Add directory="$(#WXWIDGETS.lib)/gcc_dll$(#WXWIDGETS.WX_CFG)\msw$(#WXWIDGETS.WX_SUFFIX)" />
 			<Add directory="../../include" />

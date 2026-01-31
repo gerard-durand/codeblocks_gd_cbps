@@ -27,9 +27,9 @@
 					<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
 					<Add option="-DWXUSINGDLL" />
 					<Add option="-DcbDEBUG" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-DCB_PRECOMP" />
+					<Add option="-DNOPCH" />
 					<Add option="-DwxUSE_UNICODE" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="../../../include" />
 					<Add directory="../../../include/tinyxml" />
 					<Add directory="../../../sdk/wxscintilla/include" />
@@ -54,6 +54,7 @@
 			<Add alias="All" targets="default;" />
 		</VirtualTargets>
 		<Compiler>
+			<Add option="$(#CB_BUILD.CFLAGS)" />
 			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 		</Compiler>
 		<Unit filename="EditorTweaks.cpp" />
@@ -63,9 +64,6 @@
 		<Unit filename="manifest.xml" />
 		<Unit filename="wxsmith/EditorTweaksConfDlg.wxs" />
 		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
 			<wxsmith version="1">
 				<resources>
 					<wxPanel wxs="wxsmith/EditorTweaksConfDlg.wxs" src="EditorTweaksConfDlg.cpp" hdr="EditorTweaksConfDlg.h" xrc="EditorTweaksConfDlg.xrc" fwddecl="0" i18n="1" name="EditorTweaksConfDlg" language="CPP" />

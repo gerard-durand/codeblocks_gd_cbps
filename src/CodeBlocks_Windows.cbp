@@ -14,6 +14,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-DEXPORT_LIB" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include/tinyxml" />
 				</Compiler>
 			</Target>
@@ -25,6 +26,7 @@
 				<Option parameters="-v +wx +int +t .. include/autorevision.h" />
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -41,6 +43,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-Os" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 				</Compiler>
 			</Target>
 			<Target title="Squirrel">
@@ -51,6 +54,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-DEXPORT_LIB" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include/scripting/include" />
 				</Compiler>
 			</Target>
@@ -66,6 +70,7 @@
 					<Add option="-DLINK_LEXERS" />
 					<Add option="-DSCI_LEXER" />
 					<Add option="-DWXMAKINGDLL_SCI" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="sdk/wxscintilla/src/scintilla/include" />
 					<Add directory="sdk/wxscintilla/src/scintilla/src" />
 					<Add directory="sdk/wxscintilla/src/scintilla/lexlib" />
@@ -95,6 +100,7 @@
 					<Add option="-DEXPORT_LIB" />
 					<Add option="-DEXPORT_EVENTS" />
 					<Add option="-DWXMAKINGDLL_SCI" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 					<Add directory="include/tinyxml" />
 					<Add directory="include/scripting/include" />
@@ -136,6 +142,7 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 					<Add directory="include/scripting/include" />
 					<Add directory="exchndl/win$(#CB_BUILD.OSBITS)/include" />
@@ -189,6 +196,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 					<Add directory="include/scripting/include" />
 				</Compiler>
@@ -221,6 +229,7 @@
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
 					<Add option="-DASTYLE_LIB" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 					<Add directory="plugins/astyle/astyle" />
 				</Compiler>
@@ -252,6 +261,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -296,6 +306,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 					<Add directory="plugins/compilergcc/depslib/src" />
 					<Add directory="include/scripting/include" />
@@ -332,6 +343,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -362,6 +374,8 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-DCC_GLOBAL_DEBUG_OUTPUT=2" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -392,6 +406,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -422,6 +437,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -452,6 +468,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -482,6 +499,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -512,6 +530,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -542,6 +561,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 					<Add directory="include/scripting/include" />
 				</Compiler>
@@ -573,6 +593,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -603,6 +624,7 @@
 				<Option projectLinkerOptionsRelation="1" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
@@ -638,12 +660,11 @@
 			<Add option="-mthreads" />
 			<Add option="-fmessage-length=0" />
 			<Add option="-fexceptions" />
-			<Add option="-Winvalid-pch" />
 			<Add option="-DHAVE_W32API_H" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-DWXUSINGDLL" />
 			<Add option="-DcbDEBUG" />
-			<Add option="-DCB_PRECOMP" />
+			<Add option="-DNOPCH" />
 			<Add option="-DwxUSE_UNICODE" />
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
 			<Add directory="$(#WXWIDGETS.include)" />

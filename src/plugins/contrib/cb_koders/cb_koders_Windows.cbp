@@ -16,6 +16,10 @@
 				<Option host_application="../../../devel$(WX_VER)/codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
 				<Option projectResourceIncludeDirsRelation="0" />
+				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
 			</Target>
 			<Environment>
 				<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
@@ -34,8 +38,7 @@
 			<Add option="-m$(#CB_BUILD.OSBITS)" />
 			<Add option="-fno-keep-inline-dllexport" />
 			<Add option="-DcbDEBUG" />
-			<Add option="-Winvalid-pch" />
-			<Add option="-DCB_PRECOMP" />
+			<Add option="-DNOPCH" />
 			<Add option="-DHAVE_W32API_H" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-DWXUSINGDLL" />
@@ -70,15 +73,12 @@
 		<Unit filename="kodersdialog.h" />
 		<Unit filename="manifest.xml" />
 		<Extensions>
-			<code_completion />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="" main="" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxScrollingDialog wxs="wxsmith/KodersDialog.wxs" src="kodersdialog.cpp" hdr="kodersdialog.h" fwddecl="0" i18n="1" name="KodersDialog" language="CPP" />
 				</resources>
 			</wxsmith>
-			<envvars />
-			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

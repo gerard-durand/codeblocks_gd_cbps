@@ -28,9 +28,9 @@
 					<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
 					<Add option="-DWXUSINGDLL" />
 					<Add option="-DBUILDING_PLUGIN" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-DCB_PRECOMP" />
+					<Add option="-DNOPCH" />
 					<Add option="-DwxUSE_UNICODE" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="../../include" />
 					<Add directory="../../include/tinyxml" />
 					<Add directory="../../sdk/wxscintilla/include" />
@@ -56,6 +56,10 @@
 		<VirtualTargets>
 			<Add alias="All" targets="default;" />
 		</VirtualTargets>
+		<Compiler>
+			<Add option="$(#CB_BUILD.CFLAGS)" />
+			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+		</Compiler>
 		<Unit filename="manifest.xml" />
 		<Unit filename="tidycmt.cpp" />
 		<Unit filename="tidycmt.h" />

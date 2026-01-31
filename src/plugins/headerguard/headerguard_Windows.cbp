@@ -26,9 +26,9 @@
 					<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
 					<Add option="-DWXUSINGDLL" />
 					<Add option="-DcbDEBUG" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-DCB_PRECOMP" />
+					<Add option="-DNOPCH" />
 					<Add option="-DwxUSE_UNICODE" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="../../include" />
 					<Add directory="../../include/tinyxml" />
 					<Add directory="../../sdk/wxscintilla/include" />
@@ -46,21 +46,21 @@
 					<Add after="zip -j9 ..\..\devel$(WX_VER)\share\CodeBlocks\headerguard.zip manifest.xml" />
 					<Mode after="always" />
 				</ExtraCommands>
+				<Environment>
+					<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
+				</Environment>
 			</Target>
-			<Environment>
-				<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
-			</Environment>
 		</Build>
 		<VirtualTargets>
 			<Add alias="All" targets="default;" />
 		</VirtualTargets>
+		<Compiler>
+			<Add option="$(#CB_BUILD.CFLAGS)" />
+			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+		</Compiler>
 		<Unit filename="headerguard.cpp" />
 		<Unit filename="headerguard.h" />
 		<Unit filename="manifest.xml" />
-		<Extensions>
-			<code_completion />
-			<debugger />
-			<envvars />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

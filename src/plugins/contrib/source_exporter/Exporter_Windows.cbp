@@ -17,6 +17,8 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-DWXMAKINGLIB_PDFDOC" />
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 				</Compiler>
 			</Target>
 			<Target title="makefont">
@@ -25,6 +27,10 @@
 				<Option object_output="../../../.objs$(WX_VER)/plugins/contrib/source_exporter" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
 				<Linker>
 					<Add library="wxPdfDocument" />
 					<Add library="wxmsw$(#WXWIDGETS.WX_VERSION)$(#WXWIDGETS.WX_SUFFIX)" />
@@ -37,6 +43,10 @@
 				<Option object_output="../../../.objs$(WX_VER)/plugins/contrib/source_exporter" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
 				<Linker>
 					<Add library="wxPdfDocument" />
 					<Add library="wxmsw$(#WXWIDGETS.WX_VERSION)$(#WXWIDGETS.WX_SUFFIX)" />
@@ -49,6 +59,10 @@
 				<Option object_output="../../../.objs$(WX_VER)/plugins/contrib/source_exporter" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
 				<Linker>
 					<Add library="wxPdfDocument" />
 					<Add library="wxmsw$(#WXWIDGETS.WX_VERSION)$(#WXWIDGETS.WX_SUFFIX)" />
@@ -67,9 +81,10 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-DBUILDING_PLUGIN" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-DCB_PRECOMP" />
+					<Add option="-DNOPCH" />
 					<Add option="-DcbDEBUG" />
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="../../../include" />
 					<Add directory="../../../include/tinyxml" />
 					<Add directory="../../../sdk/wxscintilla/include" />
@@ -98,7 +113,6 @@
 			<Add option="$(#CB_BUILD.CFLAGS)" />
 			<Add option="-mthreads" />
 			<Add option="-fexceptions" />
-			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add option="-DHAVE_W32API_H" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
@@ -106,6 +120,7 @@
 			<Add option="-DwxUSE_UNICODE" />
 			<Add option="-DWXMAKINGDLL_PDFDOC" />
 			<Add option="-DwxPDF_USE_WXMODULE=0" />
+			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add directory="$(#WXWIDGETS.include)" />
 			<Add directory="$(#WXWIDGETS.lib)\gcc_dll$(#WXWIDGETS.WX_CFG)\msw$(#WXWIDGETS.WX_SUFFIX)" />
 			<Add directory="wxPdfDocument/include" />

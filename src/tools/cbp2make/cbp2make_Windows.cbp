@@ -15,10 +15,20 @@
 				<Option parameters="-in cbp2make.cbp" />
 				<Option host_application="codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
+				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
+
 			</Target>
 			<Target title="Doxygen">
 				<Option type="4" />
 				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
+
 				<ExtraCommands>
 					<Add before="doxygen Doxyfile" />
 				</ExtraCommands>
@@ -36,9 +46,9 @@
 			<Add option="-fexceptions" />
 			<Add option="-fno-strict-aliasing" />
 			<Add option="-Wno-write-strings" />
-			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add option="-m$(#CB_BUILD.OSBITS)" />
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
+			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add directory="lib" />
 			<Add directory="lib/tinyxml" />
 			<Add directory="src" />
@@ -230,9 +240,6 @@
 			<Option target="default" />
 		</Unit>
 		<Extensions>
-			<envvars />
-			<code_completion />
-			<debugger />
 			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>

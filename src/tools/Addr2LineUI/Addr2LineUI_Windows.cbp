@@ -15,6 +15,8 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,8 +38,9 @@
 			<Add option="-D__WXMSW__" />
 			<Add option="-DWXUSINGDLL" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
+			<Add option="$(#CB_BUILD.CFLAGS)" />
+			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add directory="$(#WXWIDGETS.include)" />
 			<Add directory="$(#WXWIDGETS.lib)/gcc_dll$(#WXWIDGETS.WX_CFG)/msw$(#WXWIDGETS.WX_SUFFIX)" />
 		</Compiler>
@@ -59,9 +62,6 @@
 		</Unit>
 		<Unit filename="wxsmith/Addr2LineUIDialog.wxs" />
 		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
 			<lib_finder disable_auto="1" />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="Addr2LineUIApp.cpp" main="Addr2LineUIDialog" init_handlers="necessary" language="CPP" />

@@ -19,6 +19,7 @@
 				<Compiler>
 					<Add option="$(#CB_BUILD.CFLAGS)" />
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="." />
 				</Compiler>
 				<ExtraCommands>
@@ -40,6 +41,7 @@
 				<Compiler>
 					<Add option="$(#CB_BUILD.CFLAGS)" />
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="." />
 				</Compiler>
 				<ExtraCommands>
@@ -61,6 +63,7 @@
 				<Compiler>
 					<Add option="$(#CB_BUILD.CFLAGS)" />
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="." />
 				</Compiler>
 				<ExtraCommands>
@@ -82,6 +85,7 @@
 				<Compiler>
 					<Add option="$(#CB_BUILD.CFLAGS)" />
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="." />
 				</Compiler>
 				<ExtraCommands>
@@ -103,6 +107,7 @@
 				<Compiler>
 					<Add option="$(#CB_BUILD.CFLAGS)" />
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="." />
 				</Compiler>
 				<ExtraCommands>
@@ -124,6 +129,7 @@
 				<Compiler>
 					<Add option="$(#CB_BUILD.CFLAGS)" />
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="." />
 				</Compiler>
 				<ExtraCommands>
@@ -145,6 +151,7 @@
 				<Compiler>
 					<Add option="$(#CB_BUILD.CFLAGS)" />
 					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="." />
 				</Compiler>
 				<ExtraCommands>
@@ -170,9 +177,9 @@
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
 			<Add option="-DWXUSINGDLL" />
 			<Add option="-DcbDEBUG" />
-			<Add option="-Winvalid-pch" />
-			<Add option="-DCB_PRECOMP" />
+			<Add option="-DNOPCH" />
 			<Add option="-DwxUSE_UNICODE" />
+			<Add option="$(#CB_BUILD.CFLAGS)" />
 			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add directory="../../../include" />
 			<Add directory="../../../include/tinyxml" />
@@ -249,10 +256,6 @@
 		<Unit filename="manifest_xml.xml">
 			<Option target="SmartIndentXML" />
 		</Unit>
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

@@ -27,9 +27,9 @@
 					<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
 					<Add option="-DWXUSINGDLL" />
 					<Add option="-DcbDEBUG" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-DCB_PRECOMP" />
+					<Add option="-DNOPCH" />
 					<Add option="-DwxUSE_UNICODE" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="../../../include" />
 					<Add directory="../../../include/tinyxml" />
 					<Add directory="../../../sdk/wxscintilla/include" />
@@ -55,6 +55,7 @@
 			<Add alias="All" targets="default;" />
 		</VirtualTargets>
 		<Compiler>
+			<Add option="$(#CB_BUILD.CFLAGS)" />
 			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 		</Compiler>
 		<Unit filename="EditorConfig.cpp" />
@@ -65,14 +66,11 @@
 		<Unit filename="manifest.xml" />
 		<Unit filename="wxsmith/EditorConfigUI.wxs" />
 		<Extensions>
-			<code_completion />
-			<debugger />
 			<wxsmith version="1">
 				<resources>
 					<wxPanel wxs="wxsmith/EditorConfigUI.wxs" src="EditorConfigUI.cpp" hdr="EditorConfigUI.h" fwddecl="1" i18n="1" name="EditorConfigUI" language="CPP" />
 				</resources>
 			</wxsmith>
-			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

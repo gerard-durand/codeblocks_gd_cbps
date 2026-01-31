@@ -12,6 +12,10 @@
 				<Option object_output="../../.objs$(WX_VER)/tools/cb_share_config" />
 				<Option type="0" />
 				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
 			</Target>
 			<Environment>
 				<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
@@ -32,8 +36,9 @@
 			<Add option="-DHAVE_W32API_H" />
 			<Add option="-DwxUSE_UNICODE" />
 			<Add option="-DWXUSINGDLL" />
-			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
+			<Add option="$(#CB_BUILD.CFLAGS)" />
+			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add directory="$(#WXWIDGETS.include)" />
 			<Add directory="$(#WXWIDGETS.lib)/gcc_dll$(#WXWIDGETS.WX_CFG)/msw$(#WXWIDGETS.WX_SUFFIX)" />
 			<Add directory="../../include" />
@@ -55,15 +60,12 @@
 		<Unit filename="mainframe.h" />
 		<Unit filename="wxsmith/MainFrame.wxs" />
 		<Extensions>
-			<code_completion />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="app.cpp" main="MainFrame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/MainFrame.wxs" src="mainframe.cpp" hdr="mainframe.h" fwddecl="0" i18n="1" name="MainFrame" language="CPP" />
 				</resources>
 			</wxsmith>
-			<envvars />
-			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

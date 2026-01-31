@@ -13,6 +13,10 @@
 				<Option parameters="--debug-log --multiple-instance --no-check-associations -ns -nd -p debug" />
 				<Option host_application="../../../devel$(WX_VER)/codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
+				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
 			</Target>
 			<Environment>
 				<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
@@ -29,8 +33,7 @@
 			<Add option="-fmessage-length=0" />
 			<Add option="-fexceptions" />
 			<Add option="-DBUILDING_PLUGIN" />
-			<Add option="-Winvalid-pch" />
-			<Add option="-DCB_PRECOMP" />
+			<Add option="-DNOPCH" />
 			<Add option="-DHAVE_W32API_H" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
@@ -79,9 +82,6 @@
 		<Unit filename="manifest.xml" />
 		<Unit filename="wxsmith/CscopeConfigPanel.wxs" />
 		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
 			<wxsmith version="1">
 				<resources>
 					<wxPanel wxs="wxsmith/CscopeConfigPanel.wxs" src="CscopeConfigPanel.cpp" hdr="CscopeConfigPanel.h" fwddecl="0" i18n="1" name="CscopeConfigPanel" language="CPP" />

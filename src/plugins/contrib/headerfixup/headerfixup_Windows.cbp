@@ -26,9 +26,9 @@
 					<Add option="-DWXUSINGDLL" />
 					<Add option="-DBUILDING_PLUGIN" />
 					<Add option="-DcbDEBUG" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-DCB_PRECOMP" />
+					<Add option="-DNOPCH" />
 					<Add option="-DwxUSE_UNICODE" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 					<Add directory="$(#WXWIDGETS.include)" />
 					<Add directory="$(#WXWIDGETS.lib)\gcc_dll$(#WXWIDGETS.WX_CFG)\msw$(#WXWIDGETS.WX_SUFFIX)" />
 					<Add directory="../../../include" />
@@ -52,6 +52,7 @@
 			<Add alias="All" targets="default;" />
 		</VirtualTargets>
 		<Compiler>
+			<Add option="$(#CB_BUILD.CFLAGS)" />
 			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 		</Compiler>
 		<Linker>
@@ -81,8 +82,6 @@
 		<Unit filename="wxsmith/execution.wxs" />
 		<Unit filename="wxsmith/protocol.wxs" />
 		<Extensions>
-			<code_completion />
-			<envvars />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="" main="" init_handlers="necessary" language="CPP" />
 				<resources>
@@ -91,7 +90,6 @@
 					<wxScrollingDialog wxs="wxsmith/protocol.wxs" src="protocol.cpp" hdr="protocol.h" fwddecl="1" i18n="1" name="Protocol" language="CPP" />
 				</resources>
 			</wxsmith>
-			<SVNInside Login="" Password="" ConnectStatus="1" NeedsPassword="0" />
 			<debugger />
 		</Extensions>
 	</Project>

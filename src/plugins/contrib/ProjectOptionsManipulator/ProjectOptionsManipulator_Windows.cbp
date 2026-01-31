@@ -16,6 +16,10 @@
 				<Option parameters="--debug-log --no-dde --no-check-associations --multiple-instance --no-splash-screen --verbose -p debug" />
 				<Option host_application="../../../devel$(WX_VER)/codeblocks.exe" />
 				<Option run_host_application_in_terminal="0" />
+				<Compiler>
+					<Add option="$(#CB_BUILD.CFLAGS)" />
+					<Add option="-std=$(#CB_BUILD.CPP_STD)" />
+				</Compiler>
 			</Target>
 			<Environment>
 				<Variable name="WX_VER" value="$(#WXWIDGETS.WX_VERSION)_$(#CB_BUILD.OSBITS)" />
@@ -37,8 +41,7 @@
 			<Add option="-D_WIN$(#CB_BUILD.OSBITS)" />
 			<Add option="-DWXUSINGDLL" />
 			<Add option="-DcbDEBUG" />
-			<Add option="-Winvalid-pch" />
-			<Add option="-DCB_PRECOMP" />
+			<Add option="-DNOPCH" />
 			<Add option="-DwxUSE_UNICODE" />
 			<Add option="-std=$(#CB_BUILD.CPP_STD)" />
 			<Add directory="../../../include" />
@@ -72,9 +75,6 @@
 		<Unit filename="wxsmith/ProjectOptionsManipulatorDlg.wxs" />
 		<Unit filename="wxsmith/ProjectOptionsManipulatorResultDlg.wxs" />
 		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="" main="" init_handlers="necessary" language="CPP" />
 				<resources>
