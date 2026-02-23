@@ -23,8 +23,8 @@ cb_release_type is defined for wx31_64 cbps (and other wxWidgets versions), **bu
 As configured here, it is compatible with standard versions, Andrew Cottrell's old/new versions and mine.
 
 wxwidgets variable contains 3 user-defined fields:
--   wx_cfg, here contains an empty string for a standard wxWidgets version. **Don't leave it as blank, but set it to ""** (see note 2 hereafter). It could be a single letter d for a debug wxWidgets version;
--   wx_suffix normally contains the letter u, for Unicode;
+-   wx_cfg, here contains an empty string for a standard wxWidgets version. **Don't leave it as blank, but set it to ""** (see note 2 hereafter). It could be a few letters if you have installed a specific wxwidgets configuration: example xyz if your wxWidgets version is installed in lib\gcc_dllxyz;
+-   wx_suffix normally contains the letter u, for Unicode. It could be ud if you want to use a wxWidgets Unicode and debug version;
 -   wx_version reflect the wxwidgets version, here 33 for all versions 3.3. (3.3.0, 3.3.1,...)
 
 ***Note 1***: They correspond to environment variables in standard cbp files:\
