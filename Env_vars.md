@@ -34,7 +34,7 @@ wxwidgets variable contains 3 user-defined fields:
 <Variable name=\"WX_VERSION\" value=\"33\" /\>\
 </Environment\>\
 
-***Note 2***: starting with svn 13786 (feb 13, 2026), it is now possible to leave the field **wx_cfg empty**. Before this svn version, a real empty field was simply eliminated in C::B when saving the variables set. It's why, "" was used instead. But, this had side effects in some cases.
+***Note 2***: starting with **svn 13786** (feb 13, 2026), it is now possible to leave the field **wx_cfg empty**. Before this svn version, a real empty field was simply eliminated in C::B when saving the variables set. It's why, "" was used instead. But, this had side effects in some cases: for example, when debugging in C::B, if setting as: "", C::B may send wrong path to the debugger which adds "" at the end of the path.
 
 **How to use them**:
 
