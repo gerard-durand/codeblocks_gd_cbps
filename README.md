@@ -6,3 +6,5 @@ Have a look to [Env_vars.pdf](Env_vars.pdf) or [Env_vars.md](Env_vars.md) to set
 Copy the src directory in your codeblocks sources src directory.
 All cbps are named `*_Windows.cbp` and do not interfere with already standard `.cbp` project files.
 `Codeblocks_Windows.cbp` always creates an `updateWindows.bat` file. This file contains parameters to update the `outputxx_yy` directory.
+
+Note: This work started in 2022 and is based on previous ideas ans works done by Andrew Cottrell (AndrewCot).
