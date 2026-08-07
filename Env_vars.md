@@ -1,8 +1,8 @@
-![](./images/image001.png)
+![](images/image1.png)
 
-![](./images/image002.png)
+![](images/image2.png)
 
-![](./images/image003.png)
+![](images/image3.png)
 
 The current set, here wxwidgets_3_3, is defined by cloning the default one, then modifying it. Don't forget to save the result!
 
@@ -12,7 +12,7 @@ D:\\Users\\Gerard\\Documents\\CodeBlocks_SVN\\CodeBlocks_src\\src. It may be use
 
 cb_build **cflags** **must be defined**. Here, it is -O2. You can also define it with -g to obtain a C::B debug version. If you don't want to set it, don't set it to an empty field, but define it as "".
 
-cb_build **cpp_std** is used to set a compilation option as -std=... It's equivalent to the standard variable cb_cpp_std but without the string -std=. Note that \_windows.cbp only use cb.build.cpp_std, so they may be different.
+cb_build **cpp_std** is used to set a compilation option as -std=… It's equivalent to the standard variable cb_cpp_std but without the string -std=. Note that \_windows.cbp only use cb.build.cpp_std, so they may be different.
 
 To be compatible with standard cbp versions (as \*wx32_64.cbp), use cpp_std with gnu++11 as value (instead of gnu++20).
 
@@ -23,18 +23,26 @@ cb_release_type is defined for wx31_64 cbps (and other wxWidgets versions), **bu
 As configured here, it is compatible with standard versions, Andrew Cottrell's old/new versions and mine.
 
 wxwidgets variable contains 3 user-defined fields:
--   wx_cfg, here contains an empty string for a standard wxWidgets version. **Don't leave it as blank, but set it to ""** (see note 2 hereafter). It could be a few letters if you have installed a specific wxwidgets configuration: example xyz if your wxWidgets version is installed in lib\gcc_dllxyz;
--   wx_suffix normally contains the letter u, for Unicode. It could be ud if you want to use a wxWidgets Unicode and debug version;
--   wx_version reflect the wxwidgets version, here 33 for all versions 3.3. (3.3.0, 3.3.1,...)
 
-***Note 1***: They correspond to environment variables in standard cbp files:\
-<Environment\>\
-<Variable name=\"WX_CFG\" value=\"\" /\>\
-<Variable name=\"WX_SUFFIX\" value=\"u\" /\>\
-<Variable name=\"WX_VERSION\" value=\"33\" /\>\
-</Environment\>\
+- wx_cfg, here contains an empty string for a standard dll wxWidgets version. **Don't leave it as blank, but set it to ""** (see note 2 hereafter). It could be a few letters if you have installed a specific wxwidgets configuration: example xyz if your wxWidgets version is installed in lib\\gcc_dllxyz;
+- wx_suffix normally contains the letter u, for Unicode. It could be ud if you want to use a wxWidgets Unicode and debug version;
+- wx_version reflect the wxwidgets version, here 33 for all versions 3.3. (3.3.0, 3.3.1, …)
 
-***Note 2***: starting with **svn 13786** (feb 13, 2026), it is now possible to leave the field **wx_cfg empty**. Before this svn version, a real empty field was simply eliminated in C::B when saving the variables set. It's why, "" was used instead. But, this had side effects in some cases: for example, when debugging in C::B, if setting as: "", C::B may send wrong path to the debugger which adds "" at the end of the path.
+**_Note 1_**: They correspond to environment variables in standard cbp files:
+
+&lt;Environment&gt;
+
+&lt;Variable name="WX_CFG" value="" /&gt;
+
+&lt;Variable name="WX_SUFFIX" value="u" /&gt;
+
+&lt;Variable name="WX_VERSION" value="33" /&gt;
+
+&lt;/Environment&gt;
+
+**_Note 2_**: starting with **svn 13786** (feb 13, 2026), it is now possible to leave the field **wx_cfg empty**. Before this svn version, a real empty field was simply eliminated in C::B when saving the variables set. It's why, "" was used instead. But, this had side effects in some cases: for example, when debugging in C::B, if setting as: "", C::B may send wrong path to the debugger which adds "" at the end of the path. So, here is the new wxwidgets config:
+
+![](images/image4.png)
 
 **How to use them**:
 
